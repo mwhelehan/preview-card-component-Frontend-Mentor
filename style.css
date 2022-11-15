@@ -1,0 +1,86 @@
+:root {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+
+    /* Typography */
+
+    /* primary color */
+
+    --Bright_orange: hsl(31, 77%, 52%);
+    --Dark_cyan: hsl(184, 100%, 22%);
+    --Very_dark_cyan: hsl(179, 100%, 13%);
+
+    /* ### Neutral */
+
+    /* paragraphs */
+    --Transparent_white: hsla(0, 0%, 100%, 0.75);
+
+    /* (background, headings, buttons */
+    --Very_light_gray: hsl(0, 0%, 95%);
+}
+
+html {
+    font-family: 'Big Shoulders Display', cursive;
+
+    font-family: 'Lexend Deca', sans-serif;
+
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.cards {
+    border: 2px solid red;
+    /* height: 400px; */
+    width: 800px;
+    display: flex;
+}
+
+.carditem {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.carditem h2 {
+    color: var(--Very_light_gray);
+    font-family: 'Big Shoulders Display', cursive;
+
+
+}
+
+.carditem p {
+    color: var(--Transparent_white);
+    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.carditem button {
+    background-color: var(--Very_light_gray);
+    padding: 15px 25px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+.first {
+    background-color: var(--Bright_orange);
+}
+
+.second {
+    background-color: var(--Dark_cyan);
+}
+
+.third {
+    background-color: var(--Very_dark_cyan);
+}
