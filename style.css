@@ -1,80 +1,110 @@
 :root {
+
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
 
+    /* ## Colors */
 
-    /* Typography */
+    /* Primary */
 
-    /* primary color */
-
-    --Bright_orange: hsl(31, 77%, 52%);
+    --Bright_Orange: hsl(31, 77%, 52%);
     --Dark_cyan: hsl(184, 100%, 22%);
     --Very_dark_cyan: hsl(179, 100%, 13%);
 
-    /* ### Neutral */
-
-    /* paragraphs */
+    /* (paragraphs) */
     --Transparent_white: hsla(0, 0%, 100%, 0.75);
 
-    /* (background, headings, buttons */
-    --Very_light_gray: hsl(0, 0%, 95%);
-}
+    /* (background, headings, buttons) */
 
-html {
-    font-family: 'Big Shoulders Display', cursive;
-
-    font-family: 'Lexend Deca', sans-serif;
-
-
+    --Very_ligh_gray: hsl(0, 0%, 95%);
 }
 
 body {
+    font-size: 15px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-}
+    background-color: var(--Very_ligh_gray);
 
+}
 
 .cards {
-    border: 2px solid red;
-    /* height: 400px; */
-    width: 800px;
+    width: 600px;
     display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    font-family: 'Lexend Deca', sans-serif;
+
+    /* border: 2px solid red; */
+
+
+
+
+
+
 }
 
-.carditem {
-    padding: 40px;
+.cardItem {
     display: flex;
+    /* width: 600px; */
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
+    padding: 30px;
+    gap: 25px;
+    color: var(--Very_ligh_gray);
+
+
+
+
 }
 
-.carditem h2 {
-    color: var(--Very_light_gray);
+.cardItem h2 {
+    color: var(--Very_ligh_gray);
     font-family: 'Big Shoulders Display', cursive;
-
-
+    font-size: 30px
 }
 
-.carditem p {
-    color: var(--Transparent_white);
-    font-family: 'Lexend Deca', sans-serif;
-    font-family: 'Big Shoulders Display', cursive;
-}
-
-.carditem button {
-    background-color: var(--Very_light_gray);
-    padding: 15px 25px;
-    border: none;
-    outline: none;
+.cardItem button {
+    background-color: var(--Very_ligh_gray);
+    padding: 16px 30px;
     border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4 ease;
+}
+
+.first button {
+    color: var(--Bright_Orange);
+}
+
+.second button {
+    color: var(--Dark_cyan);
+}
+
+.third button {
+    color: var(--Very_dark_cyan);
+}
+
+.cardItem button:hover {
+    background-color: transparent;
+    color: 2px solid var(--Very_ligh_gray);
+    border: 2px solid var(--Very_ligh_gray);
+    padding: 14px 28px;
+}
+
+
+.cardItem p {
+    color: var(--Transparent_white);
+    flex-grow: 1;
+
+
 }
 
 .first {
-    background-color: var(--Bright_orange);
+    background-color: var(--Bright_Orange);
 }
 
 .second {
@@ -83,4 +113,34 @@ body {
 
 .third {
     background-color: var(--Very_dark_cyan);
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background-color: aquamarine;
+    }
+
+    .cards {
+        flex-direction: column;
+
+
+    }
+}
+
+
+
+
+footer {
+    display: flex;
+    margin-top: auto;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
